@@ -2,7 +2,7 @@
 function updateTime() { 
     const timeElement = document.querySelector('[data-testid="test-user-time"]'); 
     if (timeElement) { 
-        timeElement.textContent = `Current time is: ${Date.now()}ms`; 
+        timeElement.textContent = `The time since January 1, 1970: ${Date.now()}ms`;
     }
 } 
      
