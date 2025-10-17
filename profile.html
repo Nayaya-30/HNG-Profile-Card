@@ -13,7 +13,6 @@
             <!-- Avatar, Name and Bio section -->
             <header class="card-header">
                 <div class="avatar-container">
-                    <div class="avatar-glow"></div>
                     <figure class="avatar-figure">
                         <img 
                             src="./profile-pic.png" 
@@ -21,17 +20,20 @@
                             class="avatar"
                             data-testid="test-user-avatar"
                         >
+                        <figcaption class="avatar-caption" data-test-id="test-user-avatar-caption">
+                            Frontend Engineer
+                        </figcaption>
                     </figure>
                 </div>
                 
                 <div class="bio-container">
                     <h2 class="user-name" data-testid="test-user-name">Yusuf Nayaya Bashir</h2>
                     <p class="user-bio" data-testid="test-user-bio">
-                        Frontend Engineer passionate about creating accessible and beautiful web experiences. 
-                        I love turning complex problems into simple, elegant solutions that make a real difference 
-                        in people's lives.
+                        Forged in mathematics. Sharpened in frontend.<br>
+                        I do not design pages — I engineer command surfaces. Logic gave me structure.
+                        Frontend gave me expression. Now I merge both to craft interfaces that behave like instruments:
+                        precise, responsive, alive. From solving Mathematics Problems to implementing Code Logic.
                     </p>
-                    <time class="user-time" data-testid="test-user-time" role="status" aria-live="polite"></time>
                 </div>
             </header>
 
@@ -111,7 +113,8 @@
                     </ul>
                 </section>
             </div>
-            
+
+            <time class="user-time" data-testid="test-user-time" role="status" aria-live="polite"></time>
         </article>
     </main>
 
