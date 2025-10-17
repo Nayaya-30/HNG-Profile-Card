@@ -10,26 +10,108 @@
     <main class="profile-card" data-testid="test-profile-card">
         <article class="card-content">
             
-            <!-- Avatar, Name and Bio sectition -->
+            <!-- Avatar, Name and Bio section -->
             <header class="card-header">
                 <div class="avatar-container">
+                    <div class="avatar-glow"></div>
                     <figure class="avatar-figure">
                         <img 
                             src="./profile-pic.png" 
                             alt="Usouff Avatar"
                             class="avatar"
-                            data-testid="test-usouff-avatar"
+                            data-testid="test-user-avatar"
                         >
                     </figure>
                 </div>
                 
-                <h2 class="user-name" data-testid="test-user-name">Yusuf Nayaya Bashir</h2>
-                <p class="user-bio" data-testid="test-user-bio">
-                    Frontend Engineer passionate about creating accessible and beautiful web experiences. 
-                    I love turning complex problems into simple, elegant solutions that make a real difference 
-                    in people's lives.
-                </p>
+                <div class="bio-container">
+                    <h2 class="user-name" data-testid="test-user-name">Yusuf Nayaya Bashir</h2>
+                    <p class="user-bio" data-testid="test-user-bio">
+                        Frontend Engineer passionate about creating accessible and beautiful web experiences. 
+                        I love turning complex problems into simple, elegant solutions that make a real difference 
+                        in people's lives.
+                    </p>
+                    <time class="user-time" data-testid="test-user-time" role="status" aria-live="polite"></time>
+                </div>
             </header>
+
+            <!-- Social Links Section -->
+            <nav class="social-section" aria-label="Social media links">
+                <ul class="social-links" data-testid="test-user-social-links">
+                    <li>
+                        <a 
+                            href="https://twitter.com/usouff_" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-testid="test-user-social-twitter"
+                        >
+                            <span aria-hidden="true" class="social-icon" data-icon="twitter"></span> Twitter (X)
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            href="https://github.com/Nayaya-30" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-testid="test-user-social-github"
+                        >
+                            <span aria-hidden="true" class="social-icon" data-icon="github"></span> GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            href="https://frontendmentor.io/profile/Nayaya-30" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-testid="test-user-social-frontend-mentor"
+                        >
+                            <span aria-hidden="true" class="social-icon" data-icon="frontend-mentor"></span> Frontend Mentor
+                        </a>
+                    </li>
+                    <li>
+                        <a 
+                            href="https://linkedin.com/in/Nayaya-30" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            data-testid="test-user-social-linkedin"
+                        >
+                            <span aria-hidden="true" class="social-icon" data-icon="linkedin"></span> LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Hobbies and Dislikes section -->
+            <div class="info-grid">
+                <section class="info-section hobbies-section">
+                    <h3>
+                        <span aria-hidden="true">✨</span>
+                        Hobbies
+                    </h3>
+                    <ul class="info-list" data-testid="test-user-hobbies">
+                        <li>Coding</li>
+                        <li>Gaming</li>
+                        <li>Driving</li>
+                        <li>Reading</li>
+                        <li>Movies</li>
+                    </ul>
+                </section>
+
+                <section class="info-section dislikes-section">
+                    <h3>
+                        <span aria-hidden="true">❌</span>
+                        Dislikes
+                    </h3>
+                    <ul class="info-list" data-testid="test-user-dislikes">
+                        <li>Poorly documented code</li>
+                        <li>Traffic jams</li>
+                        <li>Cold Tea</li>
+                        <li>Spoilers</li>
+                        <li>Slow internet</li>
+                    </ul>
+                </section>
+            </div>
+            
         </article>
     </main>
 
