@@ -287,7 +287,7 @@ inset 0 -3px 0 var(--color-black-rgba-10);
 .social-links {
 list-style: none;
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 gap: var(--spacing-md) var(--spacing-sm);
 margin: 0;
 padding: 0;
