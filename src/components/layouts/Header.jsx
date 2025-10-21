@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { ThemeContext } from '../context/ThemeContext';
+import Button from './Button';
+import Icon from './Icon';
 import './Header.css';
 
 const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const navItems = [
     { path: '/', label: 'Home', testId: 'nav-home' },
     { path: '/about', label: 'About', testId: 'nav-about' },
-    { path: '/contact', label: 'Contact', testId: 'nav-contact' }
+    { path: '/contact', label: 'Contact', testId: 'nav-contact' },
   ];
 
   const toggleMenu = () => {
@@ -21,30 +25,27 @@ const Header = () => {
       <nav className="nav" aria-label="Main navigation">
         {/* Brand/Logo */}
         <div className="nav-brand">
-          <Link 
-            to="/" 
-            data-testid="nav-brand"
-            aria-label="Portfolio Homepage"
-          >
-            Portfolio
+          <Link to="/" data-testid="nav-brand" aria-label="Portfolio Homepage">
+            <Icon name="portfolio" className="nav-logo" ariaHidden={true} />
+            <span>Portfolio</span>
           </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button
+        <Button
           className="menu-toggle"
           onClick={toggleMenu}
           aria-expanded={isMenuOpen}
           aria-controls="main-navigation"
-          aria-label="Toggle navigation menu"
-          data-testid="nav-toggle"
+          ariaLabel={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          testId="nav-toggle"
         >
-          ☰
-        </button>
+          <Icon name={isMenuOpen ? 'close' : 'hamburger'} />
+        </Button>
 
         {/* Navigation Links */}
-        <ul 
-          className="nav-links"
+        <ul
+          className={`nav-links ${isMenuOpen ? 'open' : ''}`}
           id="main-navigation"
           data-testid="nav-links"
         >
@@ -61,10 +62,20 @@ const Header = () => {
               </Link>
             </li>
           ))}
+          <li>
+            <Button
+              onClick={toggleTheme}
+              ariaLabel={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+              testId="theme-toggle"
+              className="theme-toggle"
+            >
+              <Icon name={theme === 'dark' ? 'sun' : 'moon'} />
+            </Button>
+          </li>
         </ul>
       </nav>
     </header>
   );
 };
 
-export default Header;
+export default React.memo(Header);

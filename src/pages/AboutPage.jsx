@@ -1,157 +1,105 @@
 import React from 'react';
+import Card from '../components/Card';
+import Icon from '../components/Icon';
 import './AboutPage.css';
 
 const AboutPage = () => {
   return (
-    <main 
-      data-testid="test-about-page"
-      className="about-page"
-    >
+    <main className="about-page" data-testid="test-about-page" aria-labelledby="about-heading">
       <header className="about-header">
-        <h1>About Me</h1>
-        <p className="intro-text">A journey of learning and growth in frontend development</p>
+        <h1 id="about-heading">About Me</h1>
+        <p className="intro-text">
+          A journey of learning and growth in frontend development
+        </p>
       </header>
 
-      <section 
-        aria-labelledby="bio-heading"
-        className="about-section"
-      >
-        <h2 id="bio-heading">Bio</h2>
-        <div 
-          data-testid="test-about-bio"
-          className="content-block"
-        >
-          <p>
-            I'm a passionate frontend developer with a strong interest in creating 
-            accessible, responsive, and user-friendly web applications. My journey 
-            in web development began with HTML and CSS, and has evolved to include 
-            modern JavaScript frameworks and libraries.
-          </p>
-          <p>
-            I believe in continuous learning and staying updated with the latest 
-            web technologies and best practices. My approach to development 
-            emphasizes clean code, performance optimization, and creating 
-            inclusive digital experiences for all users.
-          </p>
-        </div>
-      </section>
+      <div className="about-sections">
+        <Card ariaLabelledBy="bio-heading" testId="test-about-bio" className="about-section">
+          <h2 id="bio-heading" className="section-heading">
+            <Icon name="user" className="section-icon" /> Bio
+          </h2>
+          <div className="content-block">
+            <p>
+              I’m a passionate frontend developer dedicated to creating accessible, responsive, and user-friendly web applications. My journey began with HTML and CSS, evolving into expertise with modern JavaScript frameworks like React.
+            </p>
+            <p>
+              I prioritize clean code, performance optimization, and inclusive digital experiences, ensuring every user can engage seamlessly with my work.
+            </p>
+          </div>
+        </Card>
 
-      <section 
-        aria-labelledby="goals-heading"
-        className="about-section"
-      >
-        <h2 id="goals-heading">Goals in This Program</h2>
-        <div 
-          data-testid="test-about-goals"
-          className="content-block"
-        >
-          <ul>
-            <li>
-              <strong>Master Advanced React Patterns:</strong> Deepen my understanding 
-              of React hooks, context API, and state management solutions.
-            </li>
-            <li>
-              <strong>Improve Testing Skills:</strong> Become proficient in writing 
-              comprehensive unit and integration tests using React Testing Library.
-            </li>
-            <li>
-              <strong>Enhance Accessibility Knowledge:</strong> Learn to build 
-              applications that are fully accessible and comply with WCAG guidelines.
-            </li>
-            <li>
-              <strong>Build Scalable Applications:</strong> Understand architecture 
-              patterns for building maintainable and scalable frontend applications.
-            </li>
-            <li>
-              <strong>Collaborate Effectively:</strong> Improve my collaboration 
-              skills through team projects and code reviews.
-            </li>
-          </ul>
-        </div>
-      </section>
+        <Card ariaLabelledBy="goals-heading" testId="test-about-goals" className="about-section">
+          <h2 id="goals-heading" className="section-heading">
+            <Icon name="check" className="section-icon" /> Goals in This Program
+          </h2>
+          <div className="content-block">
+            <ul>
+              {[
+                'Master advanced React patterns, including hooks and context API.',
+                'Write comprehensive unit and integration tests with React Testing Library.',
+                'Build fully accessible applications compliant with WCAG guidelines.',
+                'Learn architecture patterns for scalable frontend applications.',
+                'Enhance collaboration skills through team projects and code reviews.',
+              ].map((goal, index) => (
+                <li key={index}>
+                  <Icon name="check" className="list-icon" /> {goal}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Card>
 
-      <section 
-        aria-labelledby="confidence-heading"
-        className="about-section"
-      >
-        <h2 id="confidence-heading">Areas of Low Confidence</h2>
-        <div 
-          data-testid="test-about-confidence"
-          className="content-block"
-        >
-          <p>
-            While I'm comfortable with many aspects of frontend development, 
-            there are areas where I'd like to build more confidence:
-          </p>
-          <ul>
-            <li>
-              <strong>Advanced State Management:</strong> Complex state scenarios 
-              with multiple interconnected components
-            </li>
-            <li>
-              <strong>Performance Optimization:</strong> Identifying and fixing 
-              performance bottlenecks in large applications
-            </li>
-            <li>
-              <strong>Advanced Testing Scenarios:</strong> Mocking complex 
-              dependencies and testing edge cases
-            </li>
-            <li>
-              <strong>Accessibility Implementation:</strong> Ensuring all 
-              interactive elements are fully keyboard accessible and screen 
-              reader friendly
-            </li>
-          </ul>
-        </div>
-      </section>
+        <Card ariaLabelledBy="confidence-heading" testId="test-about-confidence" className="about-section">
+          <h2 id="confidence-heading" className="section-heading">
+            <Icon name="close" className="section-icon" /> Areas for Growth
+          </h2>
+          <div className="content-block">
+            <p>I’m confident in many areas but aim to strengthen:</p>
+            <ul>
+              {[
+                'Complex state management with interconnected components.',
+                'Identifying and fixing performance bottlenecks in large apps.',
+                'Testing edge cases and mocking complex dependencies.',
+                'Ensuring full keyboard accessibility and screen reader support.',
+              ].map((area, index) => (
+                <li key={index}>
+                  <Icon name="close" className="list-icon" /> {area}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Card>
 
-      <section 
-        aria-labelledby="future-heading"
-        className="about-section"
-      >
-        <h2 id="future-heading">Note to Future Self</h2>
-        <div 
-          data-testid="test-about-future-note"
-          className="content-block"
-        >
-          <blockquote>
-            "Remember why you started this journey. The challenges you face today 
-            are building the foundation for the developer you'll become tomorrow. 
-            Stay curious, keep learning, and don't be afraid to ask for help. 
-            Every expert was once a beginner."
-          </blockquote>
-          <p>
-            Focus on understanding concepts deeply rather than rushing through 
-            topics. The time you invest in solidifying your fundamentals will 
-            pay dividends throughout your career.
-          </p>
-        </div>
-      </section>
+        <Card ariaLabelledBy="future-heading" testId="test-about-future-note" className="about-section">
+          <h2 id="future-heading" className="section-heading">
+            <Icon name="message" className="section-icon" /> Note to Future Self
+          </h2>
+          <div className="content-block">
+            <blockquote>
+              “Stay curious and keep learning. Every challenge is a step toward mastery. Don’t fear asking for help—every expert was once a beginner.”
+            </blockquote>
+            <p>
+              Focus on deep understanding over speed. Your investment in fundamentals will shape a lasting career.
+            </p>
+          </div>
+        </Card>
 
-      <section 
-        aria-labelledby="extra-heading"
-        className="about-section"
-      >
-        <h2 id="extra-heading">Extra Thoughts</h2>
-        <div 
-          data-testid="test-about-extra"
-          className="content-block"
-        >
-          <p>
-            I'm particularly excited about the opportunity to work on real-world 
-            projects and receive constructive feedback. The iterative process of 
-            building, receiving feedback, and improving is where the most 
-            significant growth happens.
-          </p>
-          <p>
-            I also believe that collaboration and knowledge sharing are essential 
-            parts of becoming a better developer. I look forward to learning from 
-            peers and mentors throughout this program.
-          </p>
-        </div>
-      </section>
+        <Card ariaLabelledBy="extra-heading" testId="test-about-extra" className="about-section">
+          <h2 id="extra-heading" className="section-heading">
+            <Icon name="message" className="section-icon" /> Extra Thoughts
+          </h2>
+          <div className="content-block">
+            <p>
+              I’m excited to tackle real-world projects and grow through feedback. Iteration is where transformation happens.
+            </p>
+            <p>
+              Collaboration and knowledge sharing are key to becoming a better developer. I look forward to learning from peers and mentors.
+            </p>
+          </div>
+        </Card>
+      </div>
     </main>
   );
 };
 
-export default AboutPage;
+export default React.memo(AboutPage);

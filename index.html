@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Frontend Engineer crafting seamless digital interfaces with precision and creativity. Open to remote and
 	onsite roles.">
 	
 	<!-- Open Graph / Social Sharing -->
 	<meta property="og:title" content="Yusuf Nayaya Bashir — Frontend Engineer">
-	<meta property="og:description" content="I transform abstract concepts into tangible experiences. Open to frontend roles.">
+	<meta property="og:description"
+																																																													content="I transform abstract concepts into tangible experiences. Open to frontend roles.">
 	<meta property="og:image" content="https://hng-profile-card-omega.vercel.app/preview-desktop.png">
 	<!-- Replace with actual image -->
 	<meta property="og:url" content="https://hng-profile-card-omega.vercel.app/">
@@ -16,119 +18,14 @@
 	
 	<!-- Twitter Card (optional but recommended) -->
 	<meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="style.css">
-    <title>Usouff | Profile Card - HNG Stage 0</title>
+	<link rel="stylesheet" href="style.css">
+	<title>Usouff | Profile Card - HNG Stage 1</title>
 </head>
+
 <body>
-    <main class="profile-card" data-testid="test-profile-card">
-        <article class="card-content">
-            
-            <!-- Avatar, Name and Bio section -->
-            <header class="card-header">
-                <div class="avatar-container">
-                    <figure class="avatar-figure">
-                        <img 
-                            src="./profile-pic.png" 
-                            alt="Usouff Avatar"
-                            class="avatar"
-                            data-testid="test-user-avatar"
-                        >
-                        <figcaption class="avatar-caption" data-test-id="test-user-avatar-caption">
-                            Frontend Engineer
-                        </figcaption>
-                    </figure>
-                </div>
-                
-                <div class="bio-container">
-                    <h2 class="user-name" data-testid="test-user-name">Yusuf Nayaya Bashir</h2>
-                    <p class="user-bio" data-testid="test-user-bio">
-                        I transform abstract concepts into tangible experiences. My journey began with precision of mathematics, evolved through aesthetics of design, and found expression in the power of code. Now I merge both to craft interfaces that behave like instruments:
-                        precise, responsive, alive.
-                    </p>
-                </div>
-            </header>
+	<main id="root"></main>
+	
+	<script type="module" src="/src/main.jsx"></script>
+</body>
 
-            <!-- Social Links Section -->
-            <nav class="social-section" aria-label="Social media links">
-                <ul class="social-links" data-testid="test-user-social-links">
-                    <li>
-                        <a 
-                            href="https://twitter.com/usouff_" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            data-testid="test-user-social-twitter"
-                        >
-                            <span aria-hidden="true" class="social-icon" data-icon="twitter"></span> Twitter (X)
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            href="https://github.com/Nayaya-30" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            data-testid="test-user-social-github"
-                        >
-                            <span aria-hidden="true" class="social-icon" data-icon="github"></span> GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            href="https://frontendmentor.io/profile/Nayaya-30" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            data-testid="test-user-social-frontend-mentor"
-                        >
-                            <span aria-hidden="true" class="social-icon" data-icon="frontend-mentor"></span> Frontend Mentor
-                        </a>
-                    </li>
-                    <li>
-                        <a 
-                            href="https://linkedin.com/in/Nayaya-30" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            data-testid="test-user-social-linkedin"
-                        >
-                            <span aria-hidden="true" class="social-icon" data-icon="linkedin"></span> LinkedIn
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Hobbies and Dislikes section -->
-            <div class="info-grid">
-                <section class="info-section hobbies-section">
-                    <h3>
-                        <span aria-hidden="true">✨</span>
-                        Hobbies
-                    </h3>
-                    <ul class="info-list" data-testid="test-user-hobbies">
-                        <li>Coding</li>
-                        <li>Gaming</li>
-                        <li>Driving</li>
-                        <li>Reading</li>
-                        <li>Movies</li>
-                    </ul>
-                </section>
-
-                <section class="info-section dislikes-section">
-                    <h3>
-                        <span aria-hidden="true">❌</span>
-                        Dislikes
-                    </h3>
-                    <ul class="info-list" data-testid="test-user-dislikes">
-                        <li>Poorly documented code</li>
-                        <li>Traffic jams</li>
-                        <li>Cold Tea</li>
-                        <li>Spoilers</li>
-                        <li>Slow internet</li>
-                    </ul>
-                </section>
-            </div>
-
-            <time class="user-time" data-testid="test-user-time" role="status" aria-live="polite"></time>
-        </article>
-    </main>
-
- <script src="script.js"></script> 
- </body> 
- </html>
+</html>
