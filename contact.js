@@ -1,89 +1,33 @@
-// Contact page JavaScript functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contact-form');
-    const successMessage = document.getElementById('success-message');
-    
-    // Form validation function
-    function validateField(field) {
-        const value = field.value.trim();
-        const fieldName = field.name;
-        const errorElement = document.getElementById(fieldName + '-error');
-        
-        // Reset error message
-        errorElement.textContent = '';
-        errorElement.style.display = 'none';
-        
-        // Validation rules
-        if (field.hasAttribute('required') && value === '') {
-            showError(errorElement, `${getFieldLabel(fieldName)} is required`);
-            return false;
-        }
-        
-        if (fieldName === 'email' && value !== '') {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(value)) {
-                showError(errorElement, 'Please enter a valid email address');
-                return false;
-            }
-        }
-        
-        return true;
-    }
-    
-    function getFieldLabel(fieldName) {
-        const labels = {
-            'fullName': 'Full Name',
-            'email': 'Email Address',
-            'subject': 'Subject',
-            'message': 'Message'
-        };
-        return labels[fieldName] || fieldName;
-    }
-    
-    function showError(errorElement, message) {
-        errorElement.textContent = message;
-        errorElement.style.display = 'block';
-    }
-    
-    // Add event listeners for real-time validation
-    const formFields = contactForm.querySelectorAll('input, textarea');
-    formFields.forEach(field => {
-        field.addEventListener('blur', () => {
-            validateField(field);
-        });
-        
-        field.addEventListener('input', () => {
-            // Clear error when user starts typing
-            const errorElement = document.getElementById(field.name + '-error');
-            if (errorElement && errorElement.style.display !== 'none') {
-                errorElement.style.display = 'none';
-            }
-        });
-    });
-    
-    // Form submission handler
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Validate all fields
-        let isValid = true;
-        formFields.forEach(field => {
-            if (!validateField(field)) {
-                isValid = false;
-            }
-        });
-        
-        // If form is valid, show success message
-        if (isValid) {
-            successMessage.style.display = 'flex';
-            contactForm.reset();
-            
-            // Hide success message after 3 seconds
-            setTimeout(() => {
-                successMessage.style.display = 'none';
-            }, 3000);
-        }
-    });
-    
-    console.log('Contact page loaded');
+document.addEventListener('DOMContentLoaded', () => {
+	const form = document.getElementById('contact-form'), msg = document.getElementById('success-message'), shown = {};
+	function label(n) { return { fullName: 'Full Name', email: 'Email Address', subject: 'Subject', message: 'Message' }[n] || n; }
+	function showErr(el, m) { el.textContent = m; el.style.opacity = 1; }
+	function validate(f) {
+		const v = f.value.trim(), n = f.name, e = document.getElementById(n + '-error');
+		e.textContent = ''; e.style.opacity = 0;
+		if (f.required && !v) { showErr(e, `${label(n)} is required`); shown[n] = 1; return false; }
+		switch (n) {
+			case 'email': if (v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) { showErr(e, 'Please enter a valid email address'); shown[n] = 1; return false; } break;
+			case 'fullName': if (v.length < 3) { showErr(e, 'Full name must be at least 3 characters'); shown[n] = 1; return false; } break;
+			case 'subject': if (v.length < 3) { showErr(e, 'Subject must be at least 3 characters'); shown[n] = 1; return false; } break;
+			case 'message': if (v.length < 10) { showErr(e, 'Message must be at least 10 characters'); shown[n] = 1; return false; } break;
+		}return true;
+	}
+	form.querySelectorAll('input,textarea').forEach(f => {
+		const n = f.name;
+		f.addEventListener('blur', () => validate(f));
+		f.addEventListener('input', () => {
+			const e = document.getElementById(n + '-error');
+			if (['email', 'message'].includes(n)) {
+				if (shown[n]) { e.style.opacity = 0; return; }
+				if (e.style.opacity !== 0) e.style.opacity = 0;
+			} else validate(f);
+		});
+	});
+	form.addEventListener('submit', e => {
+		e.preventDefault();
+		let ok = true;
+		form.querySelectorAll('input,textarea').forEach(f => { if (!validate(f)) ok = false; });
+		if (ok) { msg.style.display = 'flex'; form.reset(); Object.keys(shown).forEach(k => shown[k] = 0); setTimeout(() => msg.style.display = 'none', 5000); }
+	});
 });

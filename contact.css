@@ -100,7 +100,6 @@
 	color: var(--text-primary);
 	font-family: var(--font-body);
 	font-size: 1rem;
-	margin-bottom: var(--spacing-md);
 }
 
 .form-input:focus,
@@ -118,27 +117,69 @@
 	color: var(--error);
 	font-size: 0.875rem;
 	margin-top: var(--spacing-xs);
-	display: none;
+	opacity: 0;
+	margin-bottom: var(--spacing-md);
 }
 
 /* SuccessMessage */
 .success-message {
-	background: rgba(102, 187, 106, 0.2);
-	color: var(--highlight);
-	padding: var(--spacing-sm);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.8);
+	background: var(--accent);
+	color: var(--bg-base);
+	padding: var(--spacing-md) var(--spacing-lg);
 	border-radius: var(--radius);
-	margin-bottom: var(--spacing-md);
-	text-align: center;
-	display: flex;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+	font-size: clamp(1rem, 2vw, 1.2rem);
+	z-index: 10;
+	display: none;
+	justify-content: center;
 	align-items: center;
 	gap: var(--spacing-xs);
+	text-align: center;
+	animation: bouncePop 0.6s ease-out forwards;
+}
+
+/* Add a fun emoji */
+.success-message::before {
+	content: "🎉";
+	font-size: 1.4em;
+	margin-right: 0.5rem;
+}
+
+/* Bounce pop animation */
+@keyframes bouncePop {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.5);
+	}
+	
+	60% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1.1);
+	}
+	
+	80% {
+		transform: translate(-50%, -50%) scale(0.95);
+	}
+	
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
 }
 
 /* ResponsiveStyles */
-@media (min-width: 960px) {
+@media (min-width: 769px) {
 	.contact-info-list {
 		display: flex;
 		gap: var(--spacing-md);
+	}
+	
+	.success-message {
+		width: 20%;
+		font-size: 1.2rem;
 	}
 }
 
@@ -150,10 +191,15 @@
 	.contact-page-header h1 {
 		font-size: clamp(1.5rem, 3vw, 2rem);
 	}
+	
+	.success-message {
+		width: 70%;
+		font-size: 1rem;
+	}
 }
 
 @media (max-width: 480px) {
-
+	
 	.form-input,
 	.form-textarea {
 		padding: var(--spacing-xs);
