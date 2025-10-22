@@ -1,0 +1,57 @@
+:root {
+  /* Dark Mode Palette */
+  --bg-base: #121212;
+  --surface: #1E1E1E;
+  --text-primary: #E0E0E0;
+  --text-secondary: #B0B0B0;
+  --accent: #3498DB;
+  --highlight: #66BB6A;
+  --error: #EF5350;
+
+  /* Light Mode Palette */
+  --bg-base-light: #F5F7FA;
+  --surface-light: #FFFFFF;
+  --text-primary-light: #2C3E50;
+  --text-secondary-light: #5D6D7E;
+  --accent-light: #3498DB;
+  --highlight-light: #66BB6A;
+  --error-light: #EF5350;
+
+  /* Typography */
+  --font-heading: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Monaco', 'Consolas', monospace;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+
+  /* Radii & Shadows */
+  --radius: 0.5rem;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Light Mode */
+:root[data-theme="light"] {
+  --bg-base: var(--bg-base-light);
+  --surface: var(--surface-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --accent: var(--accent-light);
+  --highlight: var(--highlight-light);
+  --error: var(--error-light);
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --bg-base: #000;
+    --surface: #FFF;
+    --text-primary: #FFF;
+    --text-secondary: #CCC;
+    --accent: #FFF;
+    --highlight: #FFF;
+    --error: #F00;
+  }
+}
