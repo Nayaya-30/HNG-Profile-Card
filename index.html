@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Frontend Engineer crafting seamless digital interfaces with precision and creativity. Open to remote and
 	onsite roles.">
-    <!-- Open Graph / Social Sharing -->
+	<!-- Open Graph / Social Sharing -->
 	<meta property="og:title" content="Yusuf Nayaya Bashir — Frontend Engineer">
-	<meta property="og:description" content="I transform abstract concepts into tangible experiences. Open to frontend roles.">
+	<meta property="og:description"
+																																																													content="I transform abstract concepts into tangible experiences. Open to frontend roles.">
 	<meta property="og:image" content="https://hng-profile-card-omega.vercel.app/preview-desktop.png">
 	<!-- Replace with actual image -->
 	<meta property="og:url" content="https://hng-profile-card-omega.vercel.app/">
@@ -15,127 +17,153 @@
 	<!-- Twitter Card (optional but recommended) -->
 	<meta name="twitter:card" content="summary_large_image">
 	<link rel="stylesheet" href="style.css">
-    <title>MiFolio | Profile | HNG Internship Stage 1</title>
+	<title>MiFolio | Profile | HNG Internship Stage 1</title>
 </head>
+
 <body>
-    <header class="header">
-        <nav class="nav" aria-label="Main navigation">
-            <div class="nav-brand">
-                <a href="./index.html" aria-label="Portfolio Homepage">
-                    <span>MiFolio</span>
-                </a>
-            </div>
-            <ul class="nav-links" id="main-navigation">
-                <li><a href="./index.html" class="active" aria-current="page">Home</a></li>
-                <li><a href="./about">About</a></li>
-                <li><a href="./contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="profile-page" data-testid="homepage" aria-labelledby="profile-heading">
-        <div class="profile-container">
-            <div class="profile-card">
-                <header class="profile-header">
-                    <div class="avatar-container">
-                        <img src="./profile-pic.png" alt="Yusuf-Avatar" class="profile-avatar" data-testid="profile-avatar" loading="lazy">
-                    </div>
-                    <div class="profile-basic-info">
-                        <h1 id="profile-heading" class="profile-name" data-testid="profile-name">
-                            Yusuf Nayaya Bashir
-                        </h1>
-                        <p class="profile-title" data-testid="profile-title">
-                            Frontend Engineer
-                        </p>
-                    </div>
-                </header>
-                
-                <section class="bio-epoch-section">
-                    <div class="card profile-section">
-                        <h2 id="bio-heading" class="section-heading">
-                            Mantra
-                        </h2>
-                        <div class="bio-content">
-                            <p>
-                                A frontend engineer born from the elegance
-                                of mathematics, building interfaces where
-                                logic meets artistry—crafting experiences
-                                that feel as seamless as they are
-                                intelligent.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="card profile-section">
-                        <h2 id="epoch-heading" class="section-heading">
-                            Current Epoch Time
-                        </h2>
-                        <div class="epoch-time" aria-live="polite" id="epoch-time">
-                            <!-- Time will be populated by JavaScript -->
-                        </div>
-                    </div>
-                </section>
-
-                <section class="profile-sections">
-                    <div class="card profile-section">
-                        <h2 id="hobbies-heading" class="section-heading">
-                            Hobbies
-                        </h2>
-                        <ul class="hobbies-list">
-                            <li class="hobby-item">Brainstorming Tech Ideas</li>
-                            <li class="hobby-item">Reading Tech Blogs</li>
-                            <li class="hobby-item">Reading</li>
-                            <li class="hobby-item">Movies</li>
-                            <li class="hobby-item">Video Games</li>
-                        </ul>
-                    </div>
-
-                    <div class="card profile-section">
-                        <h2 id="dislikes-heading" class="section-heading">
-                            Dislikes
-                        </h2>
-                        <ul class="dislikes-list">
-                            <li class="dislike-item">Poorly documented code</li>
-                            <li class="dislike-item">Inconsistent design systems</li>
-                            <li class="dislike-item">Slow loading websites</li>
-                            <li class="dislike-item">Unresponsive layouts</li>
-                            <li class="dislike-item">Lack of good sleep</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <footer class="profile-footer">
-                    <h2 class="sr-only">Social Links</h2>
-                    <nav aria-label="Social media profiles">
-                        <ul class="social-links" data-testid="profile-social-links">
-                            <li class="social-link-item">
-                                <a href="https://github.com/Nayaya-30" class="social-link" target="_blank" rel="noopener noreferrer" data-testid="profile-social-github" aria-label="Visit my GitHub profile">
-                                    <span class="sr-only">GitHub</span>
-                                </a>
-                            </li>
-                            <li class="social-link-item">
-                                <a href="https://linkedin.com/in/Nayaya-30" class="social-link" target="_blank" rel="noopener noreferrer" data-testid="profile-social-linkedin" aria-label="Visit my LinkedIn profile">
-                                    <span class="sr-only">LinkedIn</span>
-                                </a>
-                            </li>
-                            <li class="social-link-item">
-                                <a href="https://twitter.com/Usouff_" class="social-link" target="_blank" rel="noopener noreferrer" data-testid="profile-social-twitter" aria-label="Visit my Twitter profile">
-                                    <span class="sr-only">Twitter</span>
-                                </a>
-                            </li>
-                            <li class="social-link-item">
-                                <a href="https://myportfolio.com" class="social-link" target="_blank" rel="noopener noreferrer" data-testid="profile-social-portfolio" aria-label="Visit my Portfolio">
-                                    <span class="sr-only">Portfolio</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </footer>
-            </div>
-        </div>
-    </main>
-
-    <script src="profile.js"></script>
-    <script src="spa-routing.js"></script>
+	<header class="header">
+		<nav class="nav" aria-label="Main navigation">
+			<div class="nav-brand">
+				<a href="./index.html" aria-label="Portfolio Homepage">
+					<span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="220" height="48" viewBox="0 0 180 48" fill="#fff">
+							<style>
+								.text {
+									font-family: 'Poppins', sans-serif;
+									font-weight: 600;
+									font-size: 40px;
+									fill: #fff;
+								}
+								
+								.accent {
+									fill: #3498DB;
+									font-weight: 700;
+								}
+							</style>
+							<text x="5" y="32" class="text">
+								&lt;<tspan class="accent">Mi</tspan>Folio/&gt;
+							</text>
+						</svg>
+					</span>
+				</a>
+			</div>
+			<ul class="nav-links" id="main-navigation">
+				<li><a href="./index.html" class="active" aria-current="page">Home</a></li>
+				<li><a href="./about.html">About</a></li>
+				<li><a href="./contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main class="profile-page" data-testid="homepage" aria-labelledby="profile-heading">
+		<div class="profile-container">
+			<article class="profile-card">
+				<header class="profile-header">
+					<div class="avatar-container">
+						<img src="./profile-pic.png" alt="Yusuf-Avatar" class="profile-avatar" data-testid="profile-avatar"
+																																																																		loading="lazy">
+					</div>
+					<div class="profile-basic-info">
+						<h1 id="profile-heading" class="profile-name" data-testid="profile-name">
+							Yusuf Nayaya Bashir
+						</h1>
+						<p class="profile-title" data-testid="profile-title">
+							Frontend Engineer
+						</p>
+					</div>
+				</header>
+				
+				<section class="bio-epoch-section">
+					<div class="card profile-section">
+						<h2 id="bio-heading" class="section-heading">
+							Mantra
+						</h2>
+						<div class="bio-content">
+							<p>
+								A frontend engineer born from the elegance
+								of mathematics, building interfaces where
+								logic meets artistry—crafting experiences
+								that feel as seamless as they are
+								intelligent.
+							</p>
+						</div>
+					</div>
+					
+					<div class="card profile-section">
+						<h2 id="epoch-heading" class="section-heading">
+							Current Epoch Time
+						</h2>
+						<div class="epoch-time" aria-live="polite" id="epoch-time">
+							<!-- Time will be populated by JavaScript -->
+						</div>
+					</div>
+				</section>
+				
+				<section class="profile-sections">
+					<div class="card profile-section">
+						<h2 id="hobbies-heading" class="section-heading">
+							Hobbies
+						</h2>
+						<ul class="hobbies-list">
+							<li class="hobby-item">Brainstorming Tech Ideas</li>
+							<li class="hobby-item">Reading Tech Blogs</li>
+							<li class="hobby-item">Reading</li>
+							<li class="hobby-item">Movies</li>
+							<li class="hobby-item">Video Games</li>
+						</ul>
+					</div>
+					
+					<div class="card profile-section">
+						<h2 id="dislikes-heading" class="section-heading">
+							Dislikes
+						</h2>
+						<ul class="dislikes-list">
+							<li class="dislike-item">Poorly documented code</li>
+							<li class="dislike-item">Inconsistent design systems</li>
+							<li class="dislike-item">Slow loading websites</li>
+							<li class="dislike-item">Unresponsive layouts</li>
+							<li class="dislike-item">Lack of good sleep</li>
+						</ul>
+					</div>
+				</section>
+				
+				<footer class="profile-footer">
+					<h2 class="sr-only">Social Links</h2>
+					<nav aria-label="Social media profiles">
+						<ul class="social-links" data-testid="profile-social-links">
+							<li class="social-link-item">
+								<a href="https://github.com/Nayaya-30" class="social-link" target="_blank" rel="noopener noreferrer" data-testid="profile-social-github"
+																																																																				aria-label="Visit my GitHub profile">
+									<span class="sr-only">GitHub</span>
+								</a>
+							</li>
+							<li class="social-link-item">
+								<a href="https://linkedin.com/in/Nayaya-30" class="social-link" target="_blank" rel="noopener noreferrer" data-testid="profile-social-linkedin"
+																																																																				aria-label="Visit my LinkedIn profile">
+									<span class="sr-only">LinkedIn</span>
+								</a>
+							</li>
+							<li class="social-link-item">
+								<a href="https://twitter.com/Usouff_" class="social-link" target="_blank" rel="noopener noreferrer" data-testid="profile-social-twitter"
+																																																																				aria-label="Visit my Twitter profile">
+									<span class="sr-only">Twitter</span>
+								</a>
+							</li>
+							<li class="social-link-item">
+								<a href="https://myportfolio.com" class="social-link" target="_blank" rel="noopener noreferrer" data-testid="profile-social-portfolio"
+																																																																				aria-label="Visit my Portfolio">
+									<span class="sr-only">Portfolio</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</footer>
+			</article>
+		</div>
+	</main>
+	
+	<script src="script.js"></script>
+	<script src="spa-routing.js"></script>
 </body>
+
 </html>
