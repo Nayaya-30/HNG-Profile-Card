@@ -33,6 +33,7 @@
   /* Radii & Shadows */
   --radius: 0.5rem;
   --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  --shadow-avatar: 0 5px 30px rgba(255, 235, 250, 0.3);
 }
 
 /* Light Mode */
