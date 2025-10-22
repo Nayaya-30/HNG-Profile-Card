@@ -1,0 +1,26 @@
+:root {
+    /* Dark Mode Palette */
+    --bg-base: #161616;
+    --surface: #252525;
+    --text-primary: #E0E0E0;
+    --text-secondary: #B0B0B0;
+    --accent: #3498DB;
+    --highlight: #66BB6A;
+    --error: #EF5350;
+
+    /* Typography */
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'Monaco', 'Consolas', monospace;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.8rem;
+    --spacing-md: 1.2rem;
+    --spacing-lg: 1.8rem;
+
+    /* Radii & Shadows */
+    --radius: 0.5rem;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --shadow-avatar: 0 5px 30px rgba(255, 235, 250, 0.3);
+}

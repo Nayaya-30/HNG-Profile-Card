@@ -15,7 +15,7 @@ const useFormValidation = (initialValues) => {
       case 'email':
         if (!value.trim()) {
           error = 'Email is required';
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) { // validating email using Regex pattern for email format
           error = 'Please enter a valid email address';
         }
         break;
@@ -37,10 +37,12 @@ const useFormValidation = (initialValues) => {
   };
 
   const handleChange = (e) => {
+    e.preventDefault();
+
     const { name, value } = e.target;
     setValues(prev => ({ ...prev, [name]: value }));
 
-    // Validate field if it's been touched
+    // Validate field if it's been touched or focused
     if (touched[name]) {
       const error = validateField(name, value);
       setErrors(prev => ({ ...prev, [name]: error }));

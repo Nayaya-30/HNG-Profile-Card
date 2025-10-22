@@ -18,6 +18,7 @@
   font-size: clamp(2rem, 4vw, 3rem);
   font-family: var(--font-heading);
   margin-bottom: var(--spacing-sm);
+  color: var(--accent);
 }
 
 .contact-page-subtitle {
@@ -29,9 +30,9 @@
 }
 
 .contact-page-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: var(--spacing-md);
+   display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
 }
 
 .response-info-section .section-heading {
@@ -69,10 +70,18 @@
   width: 20px;
   height: 20px;
 }
+.section-heading {
+  color: var(--accent);
+}
 
-@media (max-width: 1024px) {
-  .contact-page-content {
-    grid-template-columns: 1fr;
+.contact-info-list li {
+  color: var(--text-secondary);
+}
+
+@media (min-width: 960px) {
+  .contact-info-list {
+    display: flex;
+    gap: var(--spacing-md);
   }
 }
 
