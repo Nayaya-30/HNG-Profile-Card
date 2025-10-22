@@ -1,7 +1,9 @@
+@import './styles/variables.css';
+
 :root {
   /* Dark Mode Palette */
-  --bg-base: #121212;
-  --surface: #1E1E1E;
+  --bg-base: #161616;
+  --surface: #252525;
   --text-primary: #E0E0E0;
   --text-secondary: #B0B0B0;
   --accent: #3498DB;
@@ -18,15 +20,15 @@
   --error-light: #EF5350;
 
   /* Typography */
-  --font-heading: 'Inter', sans-serif;
+  --font-heading: 'Inter',sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'Monaco', 'Consolas', monospace;
 
   /* Spacing */
   --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
+  --spacing-sm: 0.8rem;
+  --spacing-md: 1.2rem;
+  --spacing-lg: 1.8rem;
 
   /* Radii & Shadows */
   --radius: 0.5rem;
@@ -41,7 +43,7 @@
   --text-secondary: var(--text-secondary-light);
   --accent: var(--accent-light);
   --highlight: var(--highlight-light);
-  --error: var(--error-light);
+ --error: var(--error-light);
 }
 
 html, body {
@@ -54,7 +56,7 @@ html, body {
 }
 
 .sr-only {
-  position: absolute;
+position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;
@@ -75,7 +77,7 @@ html, body {
 
 @media (prefers-contrast: high) {
   :root {
-    --bg-base: #000;
+    --bg-base:#000;
     --surface: #FFF;
     --text-primary: #FFF;
     --text-secondary: #CCC;
