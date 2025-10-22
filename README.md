@@ -1,6 +1,6 @@
 # MiFolio - Personal Portfolio Website
 
-A modern, responsive portfolio website featuring multiple pages including a profile card, about page, and contact form. Built with HTML, CSS, and JavaScript using modern web development practices.
+A modern, responsive portfolio website featuring multiple pages including a profile card, about page, and contact form. Built with HTML, CSS, and JavaScript using modern web development practices with a strong focus on accessibility.
 
 ## Features
 
@@ -8,15 +8,19 @@ A modern, responsive portfolio website featuring multiple pages including a prof
 - Modern dark theme UI with consistent color scheme
 - Dynamic time display showing milliseconds since January 1, 1970
 - Interactive hover effects on all elements
-- Form validation on contact page
-- Keyboard navigation support
-- Accessibility features including focus states and semantic HTML
+- Form validation on contact page with real-time feedback
+- Comprehensive keyboard navigation support
+- Enhanced accessibility features including:
+  - Proper ARIA attributes
+  - Focus states for interactive elements
+  - Semantic HTML structure
+  - Form field placeholders and error associations
+  - Screen reader optimized content
 - Consistent design system with CSS variables
 - Multiple pages with consistent navigation
 - Fixed routing issues for production environments
 - Enhanced styling with accent colors for headings and form labels
-- Improved routing that works both locally and in production environments
-- Added uniform SVG icons for social media links with dynamic loading and accent color styling
+- SVG icons for social media links with dynamic loading
 
 ## Technologies Used
 
@@ -95,6 +99,7 @@ The main profile page features:
 - Sections for hobbies and dislikes
 - Social media links with uniform SVG icons
 - Responsive layout that adapts to different screen sizes
+- Keyboard navigation support with arrow key navigation for social links
 
 ### About Page
 
@@ -110,11 +115,12 @@ The about page includes:
 
 The contact page features:
 
-- Contact form with validation
-- Fields for name, email, subject, and message
+- Contact form with comprehensive validation
+- Fields for name, email, subject, and message with placeholders
+- Real-time validation on form fields
+- Error messages properly associated with inputs using aria-describedby
 - Success message on form submission
 - Contact information section
-- Real-time validation on form fields
 
 ## Design System
 
@@ -149,12 +155,12 @@ Media queries adjust layouts, font sizes, and component arrangements for optimal
 ## Accessibility Features
 
 - Semantic HTML structure
-- Proper ARIA attributes
-- Keyboard navigation support
+- Proper ARIA attributes including aria-describedby for form errors
+- Comprehensive keyboard navigation support
 - Focus states for interactive elements
 - Screen reader-friendly content organization
+- Form placeholders for better understanding
 - Color contrast compliant with WCAG guidelines
-- Reduced motion support
 
 ## Keyboard Navigation
 
@@ -164,6 +170,19 @@ All pages include comprehensive keyboard navigation support:
 - **Shift + Tab**: Move backward through interactive elements
 - **Enter**: Activate focused links or buttons
 - **Arrow Keys**: Navigate horizontally between social media links (on profile page)
+
+## Recent Improvements
+
+### Accessibility Enhancements
+- Added descriptive placeholders to all form inputs
+- Connected error messages to their respective inputs using `aria-describedby` attributes
+- Ensured all links are keyboard focusable with proper tabindex
+- Fixed layout issues that were affecting visual presentation and accessibility
+
+### Layout Fixes
+- Fixed HTML tag typos that were breaking the layout
+- Corrected alignment issues in the profile section grid
+- Removed problematic margins that were causing misalignment
 
 ## Learning Points
 
@@ -191,13 +210,12 @@ This project demonstrates several important frontend development concepts:
    - ARIA attributes for screen readers
    - Keyboard navigation support
    - Focus management
+   - Form error association
 
 5. **Project Structure**
    - Modular CSS with global variables
    - Separation of concerns
    - Consistent naming conventions
-
-
 
 ## Deployment
 
@@ -219,7 +237,6 @@ To ensure proper routing in production environments (especially GitHub Pages):
 2. Added a `404.html` page that acts as a redirect handler for GitHub Pages
 3. Added `spa-routing.js` script to help with client-side routing on GitHub Pages
 4. All pages include the routing script to ensure proper navigation
-5. Added hash-based routing support for single-page application behavior (e.g., `#/about` will load about.html)
 
 ## Contributing
 
@@ -235,7 +252,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 -   Frontend Engineer
 -   GitHub: [Nayaya-30](https://github.com/Nayaya-30)
--   Twitter: [@usouff\_](https://twitter.com/usouff_)
+-   Twitter: [@usouff_](https://twitter.com/usouff_)
 -   LinkedIn: [Nayaya-30](https://linkedin.com/in/Nayaya-30)
 -   Frontend Mentor: [Nayaya-30](https://www.frontendmentor.io/profile/Nayaya-30)
 
