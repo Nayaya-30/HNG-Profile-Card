@@ -178,9 +178,16 @@
 	}
 	
 	.success-message {
-		width: 20%;
+		width: 40%;
 		font-size: 1.2rem;
 	}
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: var(--text-secondary);
+	font-style: italic;
+	font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {

@@ -12,7 +12,7 @@
             <div class="nav-brand">
                 <a href="./index.html" aria-label="Portfolio Homepage">
                     <span>
-							<svg xmlns="http://www.w3.org/2000/svg" width="220" height="48" viewBox="0 0 180 48" fill="#fff">
+							<svg xmlns="http://www.w3.org/2000/svg" width="250" height="48" viewBox="0 0 180 48" fill="#fff">
 							<style>
 								.text {
 									font-family: 'Poppins', sans-serif;
@@ -34,30 +34,30 @@
                 </a>
             </div>
             <ul class="nav-links" id="main-navigation">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html" class="active" aria-current="page">Contact</a></li>
+                <li><a href="./index.html"tabindex="0">Home</a></li>
+                <li><a href="./about.html" tabindex="0">About</a></li>
+                <li><a href="./contact.html" class="active" aria-current="page" tabindex="0">Contact</a></li>
             </ul>
-        </nav>
+       </nav>
     </header>
 
-    <main class="contact-page" data-testid="contact-page" aria-labelledby="contact-page-heading">
+    <main class="contact-page" data-testid="test-contact-page" aria-labelledby="contact-page-heading">
         <header class="contact-page-header">
             <h1 id="contact-page-heading">Contact Us</h1>
             <p class="contact-page-subtitle">
-                Have a question or wanna work together? We would love to
+               Have a question or wanna work together? Wewould love to
                 hear from you. Send us a message using the form below or
                 reach out via the contact info provided under.
             </p>
         </header>
 
         <div class="contact-page-content">
-            <section class="contact-form-section" aria-labelledby="contact-form-heading">
+            <section class="contact-form-section"aria-labelledby="contact-form-heading">
                 <h2 id="contact-form-heading" class="sr-only">
                     Contact Form
                 </h2>
                 <div class="card" data-testid="contact-form-card">
-                    <div id="success-message" class="success-message" role="alert" aria-live="polite" style="display: none;">
+                    <div id="success-message" class="success-message" data-testid="test-contact-success"role="alert" aria-live="polite"style="display: none;">
                         Thank you for your message! We'll get back to you soon.
                     </div>
 
@@ -69,45 +69,53 @@
                                 id="fullName" 
                                 name="fullName" 
                                 class="form-input"
-                                required>
-                            <div id="fullName-error" class="error-message" role="alert"></div>
+                                data-testid="test-contact-name"
+                                required
+placeholder="Enter your full name">
+                            <div id="fullName-error"class="error-message" data-testid="test-contact-error-name" role="alert" aria-describedby="fullName"></div>
                         </div>
 
                         <div class="form-group">
-                            <label for="email" class="form-label">Email Address *</label>
+                            <label for="email" class="form-label">EmailAddress *</label>
                             <input 
                                 type="email" 
                                 id="email" 
                                 name="email" 
                                 class="form-input"
-                                required>
-                            <div id="email-error" class="error-message" role="alert"></div>
-                        </div>
+                                data-testid="test-contact-email"
+                                required
+placeholder="email@address.com">
+                            <div id="email-error" class="error-message" data-testid="test-contact-error-email" role="alert" aria-describedby="email"></div>
+</div>
 
                         <div class="form-group">
-                            <label for="subject" class="form-label">Subject *</label>
+                            <label for="subject" class="form-label">Subject*</label>
                             <input 
                                 type="text" 
                                 id="subject" 
                                 name="subject" 
                                 class="form-input"
-                                required>
-                            <div id="subject-error" class="error-message" role="alert"></div>
+                                data-testid="test-contact-subject"
+required
+placeholder="Message subject">
+                            <div id="subject-error" class="error-message" data-testid="test-contact-error-subject" role="alert" aria-describedby="subject"></div>
                         </div>
 
                         <div class="form-group">
-                            <label for="message" class="form-label">Message *</label>
+                            <label for="message" class="form-label">Message*</label>
                             <textarea 
                                 id="message" 
                                 name="message" 
                                 class="form-textarea"
                                 rows="6"
-                                required></textarea>
-                            <div id="message-error" class="error-message" role="alert"></div>
+                                data-testid="test-contact-message"
+                                required
+placeholder="Type your message here"></textarea>
+                            <div id="message-error" class="error-message"data-testid="test-contact-error-message" role="alert" aria-describedby="message"></div>
                         </div>
 
                         <button type="submit" class="button" data-testid="test-contact-submit">
-                            Send Message
+                            SendMessage
                         </button>
                     </form>
                 </div>
@@ -117,12 +125,12 @@
                 <h2 id="response-info-heading" class="section-heading">
                     Contact Info
                 </h2>
-                <div class="card" data-testid="response-info-card">
+                <div class="card"data-testid="response-info-card">
                     <div class="response-info">
                         <ul class="contact-info-list">
-                            <li>Email: nexr.front@gmail.com</li>
+<li>Email: nexr.front@gmail.com</li>
                             <li>Phone: +234 (701) 456-7890</li>
-                            <li>Address: Suite 123, 456 Business Rd, Maitama Abuja</li>
+                           <li>Address: Suite 123, 456 Business Rd, Maitama Abuja</li>
                         </ul>
                     </div>
                 </div>
