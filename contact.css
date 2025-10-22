@@ -88,7 +88,7 @@
 .form-label {
     font-weight: bold;
     margin-bottom: var(--spacing-xs);
-    color: var(--text-primary);
+    color: var(--accent);
 }
 
 .form-input,

@@ -1,44 +1,58 @@
-## Project 1: Profile Card
+# MiFolio - Personal Portfolio Website
 
-A responsive profile card featuring modern glassmorphism design with dynamic elements.
+A modern, responsive portfolio website featuring multiple pages including a profile card, about page, and contact form. Built with HTML, CSS, and JavaScript using modern web development practices.
 
-### Features
+## Features
 
--   Responsive design that works on mobile, tablet, and desktop
--   Glassmorphism UI with backdrop filters and transparency effects
--   Dynamic time display showing milliseconds since January 1, 1970
--   Social media links with SVG icons
--   Interactive hover effects on all elements
--   Keyboard navigation support
--   Accessibility features including focus states and reduced motion support
+- Fully responsive design that works on mobile, tablet, and desktop
+- Modern dark theme UI with consistent color scheme
+- Dynamic time display showing milliseconds since January 1, 1970
+- Interactive hover effects on all elements
+- Form validation on contact page
+- Keyboard navigation support
+- Accessibility features including focus states and semantic HTML
+- Consistent design system with CSS variables
+- Multiple pages with consistent navigation
+- Fixed routing issues for production environments
+- Enhanced styling with accent colors for headings and form labels
+- Improved routing that works both locally and in production environments
+- Added uniform SVG icons for social media links with dynamic loading and accent color styling
 
-### Technologies Used
+## Technologies Used
 
--   HTML5
--   CSS3 (with modern features like CSS variables, flexbox, grid)
--   JavaScript (ES6+)
--   CSS Variables for consistent theming
--   Responsive design with media queries
--   SVG icons for crisp rendering at any size
+- HTML5
+- CSS3 (with modern features like CSS variables, flexbox, grid)
+- JavaScript (ES6+)
+- CSS Variables for consistent theming
+- Responsive design with media queries
+- Semantic HTML for accessibility
 
-### Key Design Elements
-
--   Glassmorphism effect using `backdrop-filter: blur()`
--   Smooth transitions and animations
--   Gradient backgrounds and text effects
--   Responsive layout that adapts to different screen sizes
--   Interactive link elements with hover and focus states
--   Dynamic time display updated every second using setInterval()
-
-### File Structure
+## Project Structure
 
 ```
 .
-├── index.html          # Main profile card HTML
-├── style.css           # Styling with glassmorphism effects
-├── script.js           # Dynamic functionality
+├── index.html          # Main profile page
+├── about.html          # About page
+├── contact.html        # Contact page
+├── 404.html            # Error page for handling routing
+├── style.css           # Main stylesheet for profile page
+├── about.css           # Stylesheet for about page
+├── contact.css         # Stylesheet for contact page
+├── script.js           # JavaScript for profile page
+├── about.js            # JavaScript for about page
+├── contact.js          # JavaScript for contact page
+├── spa-routing.js      # Client-side routing helper for GitHub Pages
 ├── profile-pic.png     # Profile image
-└── background.jpg      # Background image
+├── svgs/               # SVG icons for social media
+│   ├── github.svg      # GitHub icon
+│   ├── linkedin.svg    # LinkedIn icon
+│   ├── twitter.svg     # Twitter icon
+│   └── portfolio.svg   # Portfolio icon
+├── global/
+│   ├── variables.css   # CSS variables for consistent design
+│   └── global.css      # Global styles and shared components
+├── MiFolio/            # React version of the portfolio (in development)
+└── README.md           # This file
 ```
 
 ## Getting Started
@@ -70,108 +84,120 @@ To run these projects locally:
     # Right-click on index.html and select "Open with Live Server"
     ```
 
-## Keyboard Navigation
+## Pages
 
-The profile card application includes comprehensive keyboard navigation support to ensure accessibility for all users. Here's how to navigate the application using only a keyboard:
+### Home Page (Profile)
 
-### Navigation Controls
+The main profile page features:
 
--   **Tab**: Move forward through interactive elements in the following order:
-    1. Twitter link
-    2. GitHub link
-    3. Frontend Mentor link
-    4. LinkedIn link
--   **Shift + Tab**: Move backward through interactive elements in reverse order
+- Profile card with avatar image
+- Dynamic time display that updates every 100ms
+- Sections for hobbies and dislikes
+- Social media links with uniform SVG icons
+- Responsive layout that adapts to different screen sizes
 
--   **Enter**: Activate focused links or elements (e.g., open social media links in a new tab)
+### About Page
 
--   **Arrow Keys**: Navigate horizontally between social media links
+The about page includes:
 
-### Hoverable Elements
+- Personal bio and background
+- Goals in the program
+- Areas for growth and improvement
+- Note to future self
+- Extra thoughts on development philosophy
 
-Elements in the profile card that are fully hoverable on mouseover:
+### Contact Page
 
--   **Social Media Links**: Twitter, GitHub, Frontend Mentor, LinkedIn
--   **Information Items**: Hobby and dislike tags
--   **Profile Elements**: Avatar and name
+The contact page features:
 
-### Special Features
+- Contact form with validation
+- Fields for name, email, subject, and message
+- Success message on form submission
+- Contact information section
+- Real-time validation on form fields
 
--   **Dynamic Time Display**: The timestamp automatically updates every second
--   **Social Link Navigation**: Use left/right arrow keys to move between social media links on focus for quicker navigation
--   **Visual Feedback**: All focusable and hoverable elements have enhanced styling to clearly indicate focus and hover states
+## Design System
+
+The project uses a consistent design system with CSS variables for theming:
+
+- Dark color palette with accent colors
+- Consistent spacing system
+- Typography hierarchy
+- Reusable components like cards and buttons
+- Smooth transitions and hover effects
+
+### Color Palette
+
+- Background: `#161616`
+- Surface: `#252525`
+- Text Primary: `#E0E0E0`
+- Text Secondary: `#B0B0B0`
+- Accent: `#3498DB` (blue)
+- Highlight: `#66BB6A` (green)
+- Error: `#EF5350` (red)
 
 ## Responsive Design
 
 The project is fully responsive and will adapt to different screen sizes:
 
--   Mobile (up to 480px)
--   Tablet (481px to 768px)
--   Desktop (1024px and above)
+- Mobile (up to 480px)
+- Tablet (481px to 768px)
+- Desktop (1024px and above)
+
+Media queries adjust layouts, font sizes, and component arrangements for optimal viewing on all devices.
 
 ## Accessibility Features
 
--   Semantic HTML structure
--   Proper ARIA attributes
--   Keyboard navigation support
--   Focus states for interactive elements
--   Reduced motion support for users with motion sensitivity
+- Semantic HTML structure
+- Proper ARIA attributes
+- Keyboard navigation support
+- Focus states for interactive elements
+- Screen reader-friendly content organization
+- Color contrast compliant with WCAG guidelines
+- Reduced motion support
 
-## Browser Support
+## Keyboard Navigation
 
-These projects use modern CSS and JavaScript features that are supported in all modern browsers:
+All pages include comprehensive keyboard navigation support:
 
--   Chrome 79+
--   Firefox 72+
--   Safari 14+
--   Edge 79+
-
-Note: Some effects like `backdrop-filter` may not be supported in older browsers so dont forget to include -webkit- prefixes.
-
-## Customization
-
-### Profile Card
-
-To customize the profile card:
-
-1. Replace `profile-pic.png` with your own image
-2. Update personal information in `index.html`
-3. Modify colors in `:root` variables in `style.css`
-4. Add or remove social links in the navigation section
+- **Tab**: Move forward through interactive elements
+- **Shift + Tab**: Move backward through interactive elements
+- **Enter**: Activate focused links or buttons
+- **Arrow Keys**: Navigate horizontally between social media links (on profile page)
 
 ## Learning Points
 
 This project demonstrates several important frontend development concepts:
 
 1. **Modern CSS Techniques**
+   - CSS variables for consistent theming
+   - Flexbox and Grid layouts
+   - Responsive design with media queries
+   - Modern selectors and pseudo-elements
 
-    - CSS variables for consistent theming
-    - Flexbox and Grid layouts
-    - Advanced selectors and pseudo-elements
-    - Responsive design with media queries
+2. **JavaScript Best Practices**
+   - DOMContentLoaded event for proper initialization
+   - Form validation techniques
+   - Event handling and delegation
+   - Modern ES6+ syntax
 
-2. **Glassmorphism Effect**
+3. **Performance Considerations**
+   - CSS transitions for smooth animations
+   - Efficient JavaScript with minimal DOM queries
+   - Optimized rendering
 
-    - Using `backdrop-filter` for frosted glass effect
-    - Layering transparency and blur for depth
+4. **Accessibility**
+   - Semantic HTML
+   - ARIA attributes for screen readers
+   - Keyboard navigation support
+   - Focus management
 
-3. **JavaScript Best Practices**
+5. **Project Structure**
+   - Modular CSS with global variables
+   - Separation of concerns
+   - Consistent naming conventions
 
-    - DOMContentLoaded event for proper initialization
-    - Event delegation for efficient event handling
-    - Modern ES6+ syntax
 
-4. **Performance Considerations**
-
-    - CSS transitions for smooth animations
-    - Efficient JavaScript with minimal DOM queries
-    - Optimized SVG rendering with fallbacks
-
-5. **Accessibility**
-    - Semantic HTML
-    - ARIA attributes for screen readers
-    - Keyboard navigation support
-    - Focus management
 
 ## Deployment
 
@@ -184,6 +210,16 @@ These are static websites that can be deployed to any static hosting service:
 -   AWS S3
 
 Simply upload all files to your hosting provider and your site will be live.
+
+### Routing Fix for Production
+
+To ensure proper routing in production environments (especially GitHub Pages):
+
+1. All navigation links now use relative paths (e.g., `./index.html`) instead of absolute paths (e.g., `/`)
+2. Added a `404.html` page that acts as a redirect handler for GitHub Pages
+3. Added `spa-routing.js` script to help with client-side routing on GitHub Pages
+4. All pages include the routing script to ensure proper navigation
+5. Added hash-based routing support for single-page application behavior (e.g., `#/about` will load about.html)
 
 ## Contributing
 

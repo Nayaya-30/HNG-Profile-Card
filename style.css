@@ -115,6 +115,7 @@ height: 160px;
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
+    color: var(--accent);
 }
 
 .section-heading::before {
@@ -183,10 +184,22 @@ width: 4px;
     transition: all 0.3s ease;
 }
 
+.social-link svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--accent);
+}
+
 .social-link:hover,
 .social-link:focus {
     background: var(--accent);
+    stroke: var(--accent);
     transform: translateY(-3px);
+}
+
+.social-link:hover svg,
+.social-link:focus svg {
+    stroke: var(--text-primary);
 }
 
 /* ResponsiveStyles */
