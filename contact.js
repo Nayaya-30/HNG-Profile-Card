@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	form.querySelectorAll('input,textarea').forEach(f => {
 		const n = f.name;
+		// Set initial aria-describedby attribute
+		f.setAttribute('aria-describedby', n + '-error');
+		
 		f.addEventListener('blur', () => validate(f));
 		f.addEventListener('input', () => {
 			const e = document.getElementById(n + '-error');

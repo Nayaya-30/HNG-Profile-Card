@@ -14,7 +14,7 @@
 			<div class="nav-brand">
 				<a href="./index.html" aria-label="Portfolio Homepage">
 					<span>
-						<svg xmlns="http://www.w3.org/2000/svg" width="220" height="48" viewBox="0 0 180 48" fill="#fff">
+						<svg xmlns="http://www.w3.org/2000/svg" width="250" height="48" viewBox="0 0 180 48" fill="#fff">
 							<style>
 								.text {
 									font-family: 'Poppins', sans-serif;
@@ -36,18 +36,18 @@
 				</a>
 			</div>
 			<ul class="nav-links" id="main-navigation">
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="./about.html" class="active" aria-current="page">About</a></li>
-				<li><a href="./contact.html">Contact</a></li>
+				<li><a href="./index.html"tabindex="0">Home</a></li>
+				<li><a href="./about.html" class="active" aria-current="page" tabindex="0">About</a></li>
+				<li><a href="./contact.html" tabindex="0">Contact</a></li>
 			</ul>
-		</nav>
+	</nav>
 	</header>
 	
 	<main class="about-page" data-testid="test-about-page" aria-labelledby="about-heading">
 		<header class="about-header">
 			<h1 id="about-heading">About Me</h1>
 			<p class="intro-text">
-				A lone journey of learning and growth through breaking and
+				A lone journey oflearning and growth through breaking and
 				fixing in frontend development
 			</p>
 		</header>
@@ -56,31 +56,31 @@
 			<h2 id="bio-heading" class="bio-heading section-heading">
 				My Bio
 			</h2>
-			<div class="bio-content">
+			<div class="bio-content" data-testid="test-about-bio">
 				<p>
 					I'm a passionate frontend developer dedicated to
 					creating accessible, responsive, and user-friendly web
 					applications that are scalable, manageable, and
 					maintainable. My journey began with HTML and CSS since
-					2024 while I was a Mathematics undergraduate. Now a
+				2024 while I was a Mathematics undergraduate. Now a
 					graduate, and the journey is evolving into expertise with
 					modern JavaScript frameworks like React and a type
 					system library, TypeScript.
 				</p>
 				<p>
 					I prioritize clean code, performance optimization, and
-					inclusive digital experiences, ensuring every user can
+inclusive digital experiences, ensuring every user can
 					engage seamlessly with my work.
 				</p>
 			</div>
 		</div>
 		
 		<div class="about-sections">
-			<div class="card about-section">
+			<section class="card about-section" data-testid="test-about-goals">
 				<h2 id="goals-heading" class="section-heading">
 					Goals in This Program
 				</h2>
-				<div class="content-block">
+				<article class="content-block">
 					<ul>
 						<li>
 							<span style="color: green;">✔</span>
@@ -105,14 +105,14 @@
 							o connect with mentors, tech peers and maybe potential employers.
 						</li>
 					</ul>
-				</div>
-			</div>
+				</article>
+			</section>
 			
-			<div class="card about-section">
+			<section class="card about-section" data-testid="test-about-confidence">
 				<h2 id="confidence-heading" class="section-heading">
 					Areas for Growth
 				</h2>
-				<div class="content-block">
+				<article class="content-block">
 					<p>
 						I'm confident in many areas but aim to strengthen:
 					</p>
@@ -123,14 +123,14 @@
 						<li>🌱 Implementing advanced security practices in frontend code.</li>
 						<li>🌱 Implementing multiple API endpoints and handling complex data flows.</li>
 					</ul>
-				</div>
-			</div>
-			
-			<div class="card about-section">
+			</article>
+			</section>
+
+			<section class="card about-section" data-testid="test-about-future-bote">
 				<h2 id="future-heading" class="section-heading">
 					Note to Future Self
 				</h2>
-				<div class="content-block">
+				<article class="content-block">
 					<blockquote>
 						"<strong>Remember the ultimate goal:</strong> Stay
 						curious and keep learning. Every challenge is a step
@@ -142,14 +142,14 @@
 						investment in fundamentals will shape a lasting
 						career.
 					</p>
-				</div>
-			</div>
-			
-			<div class="card about-section">
+				</article>
+			</section>
+
+			<section class="card about-section" data-testid="test-about-extra">
 				<h2 id="extra-heading" class="section-heading">
 					Extra Thoughts
 				</h2>
-				<div class="content-block">
+				<article class="content-block">
 					<p>
 						I'm constantly exploring new ways to blend design
 						and code — learning not just how things work, but
@@ -161,12 +161,12 @@
 					</p>
 					<p>
 						My goal is simple: keep growing, keep building, and
-						keep creating experiences that feel
+					keep creating experiences that feel
 						effortless for users. I look forward to learning
 						from peers and mentors.
 					</p>
-				</div>
-			</div>
+				</article>
+			</section>
 		</div>
 	</main>
 	
