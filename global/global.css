@@ -141,6 +141,7 @@ body {
 	.nav {
 		padding: var(--spacing-sm);
 		flex-direction: column;
+		justify-content: center;
 		gap: var(--spacing-md);
 	}
 	
